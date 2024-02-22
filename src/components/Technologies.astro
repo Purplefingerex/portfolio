@@ -1,27 +1,45 @@
-<h1>Technologies</h1>
-<div class="tech-container">
-	<ul>
-		<li>HTML</li>
-		<li>CSS</li>
-		<li>Javascript</li>
-		<li>React.js</li>
-	</ul>
+<div class="tech-main">
+	<h1>Technologies</h1>
+	<div class="tech-container">
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>Javascript</li>
+			<li>React.js</li>
+		</ul>
 
-	<ul>
-		<li>Node.js</li>
-		<li>Postgresql</li>
-		<li>Git</li>
-		<li>Jira</li>
-	</ul>
+		<ul>
+			<li>Node.js</li>
+			<li>Postgresql</li>
+			<li>Git</li>
+			<li>Jira</li>
+		</ul>
+	</div>
 </div>
 
 <style>
+	.tech-main {
+		font-size: 1.3rem;
+		background-color: #272d2d;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		max-width: 800px;
+		margin: -50px auto 20px;
+		border-radius: 15px;
+		color: #b8c5d6;
+		box-shadow: 0px 5px 2px 0px var(--powderBlue);
+	}
 	.tech-container {
 		display: flex;
-		justify-content: space-around;
 		flex-wrap: wrap;
+		gap: 50px;
+		margin: 0 auto;
 	}
 	ul {
 		list-style: none;
+	}
+	ul li {
+		margin: 10px;
 	}
 </style>
