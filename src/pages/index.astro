@@ -5,6 +5,7 @@ import Sidebar from "../components/Sidebar.astro";
 import About from "../components/About.astro";
 import Technologies from "../components/Technologies.astro";
 import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -13,18 +14,5 @@ import Projects from "../components/Projects.astro";
 	<About />
 	<Technologies />
 	<Projects />
-
-	<form action="POST">
-		<div>
-			<label for="name">
-				<input type="text" name="name" id="name" />
-			</label>
-			<label for="name">
-				<input type="email" name="name" id="name" />
-			</label>
-			<label for="name">
-				<textarea name="" id="" cols="30" rows="10"></textarea>
-			</label>
-		</div>
-	</form>
+	<Contact />
 </Layout>
