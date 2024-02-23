@@ -1,0 +1,13 @@
+---
+const { platform, username, imgsrc } = Astro.props;
+---
+
+<a target="_blank" href={`https://www.${platform}.com/${username}`}>
+	<img src={imgsrc} alt={platform} />
+</a>
+
+<style>
+	img {
+		height: 50px;
+	}
+</style>

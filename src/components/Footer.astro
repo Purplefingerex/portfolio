@@ -1,0 +1,35 @@
+---
+import Social from "./Social.astro";
+---
+
+<footer>
+	<div class="footer-container">
+		<Social
+			platform="github"
+			username="Purplefingerex"
+			imgsrc="/github.svg"
+		/>
+		<Social
+			platform="linkedin"
+			username="in/alexander-acsai-906940272/"
+			imgsrc="/linkedin.svg"
+		/>
+    <a href="mailto:acsaia@hotmail.com">
+
+      <img src="/email.svg" alt="">
+    </a>
+	</div>
+</footer>
+
+<style>
+  img {
+		height: 50px;
+	}
+	footer {
+		background-color: var(--powderBlue);
+		height: 500px;
+	}
+  .footer-container{
+    margin-top;
+  }
+</style>

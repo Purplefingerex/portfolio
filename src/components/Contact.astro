@@ -1,6 +1,10 @@
+---
+
+---
+
 <div class="contact-main">
 	<h1>Have a question? Want to say hi? Send me a message!</h1>
-	<form action="POST">
+	<form name="contact" data-netlify="true">
 		<div>
 			<div class="name-email">
 				<label for="name">
@@ -65,5 +69,19 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+	button {
+		font-size: 1.3rem;
+		margin-top: 50px;
+		padding: 10px 30px;
+		border-radius: 100px;
+		background-color: transparent;
+		border: 1px solid var(--gunmetal);
+	}
+	button:hover {
+		background-color: var(--powderBlue);
+	}
+	button:focus {
+		background-color: var(--gunmetal);
 	}
 </style>
