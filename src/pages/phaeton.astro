@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { imageSources } from "../scripts/imageData.js";
+// console.log(imageSources);
+---
+
+<Layout title="Phaeton project">
+	<h1>Phaeton</h1>
+	<h2>A shuttle, car and parking rental web app</h2>
+	<h3>
+		Description:
+		<br />
+		This was my school project, i was in a team of 4
+	</h3>
+	<div class="carousel">
+		<ul class="carouselTargetList">
+			{
+				imageSources.map((img, i) => {
+					return (
+						<li>
+							<img src={img} alt="" />
+						</li>
+					);
+				})
+			}
+		</ul>
+	</div>
+</Layout>
+<style>
+	ul {
+		list-style: none;
+		display: flex;
+		gap: 10px;
+		overflow: scroll;
+	}
+	img {
+		width: 350px;
+		height: 200px;
+		overflow: hidden;
+	}
+</style>
