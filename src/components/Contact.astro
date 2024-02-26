@@ -2,7 +2,7 @@
 
 ---
 
-<div class="contact-main">
+<div class="contact-main" id="contact">
 	<h1>Have a question? Want to say hi? Send me a message!</h1>
 	<form name="contact" data-netlify="true">
 		<div>
@@ -10,18 +10,35 @@
 				<label for="name">
 					Name
 					<br />
-					<input type="text" name="name" id="name" />
+					<input
+						type="text"
+						name="name"
+						id="name"
+						placeholder="Enter Your Name"
+					/>
 				</label>
 				<label for="email"
 					>Email
 					<br />
-					<input type="email" name="name" id="name" />
+					<input
+						type="email"
+						name="name"
+						id="name"
+						placeholder="Enter Your Email"
+					/>
 				</label>
 			</div>
 			<div class="textarea-container">
-				<label for="message"> Your Message</label>
-				<textarea name="message" id="message" cols="30" rows="10"
-				></textarea>
+				<label for="message">
+					Your Message
+					<br />
+					<textarea
+						name="message"
+						id="message"
+						cols="30"
+						rows="10"
+						placeholder="Enter Your Message"></textarea>
+				</label>
 			</div>
 		</div>
 		<button type="submit">Submit</button>
@@ -77,11 +94,13 @@
 		border-radius: 100px;
 		background-color: transparent;
 		border: 1px solid var(--gunmetal);
+		transition: all 0.5s;
 	}
 	button:hover {
 		background-color: var(--powderBlue);
 	}
 	button:focus {
 		background-color: var(--gunmetal);
+		color: var(--aliceBlue);
 	}
 </style>

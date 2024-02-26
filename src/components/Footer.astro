@@ -1,5 +1,6 @@
 ---
 import Social from "./Social.astro";
+const date = new Date();
 ---
 
 <footer>
@@ -14,22 +15,26 @@ import Social from "./Social.astro";
 			username="in/alexander-acsai-906940272/"
 			imgsrc="/linkedin.svg"
 		/>
-    <a href="mailto:acsaia@hotmail.com">
-
-      <img src="/email.svg" alt="">
-    </a>
+		<a href="mailto:acsaia@hotmail.com">
+			<img src="/email.svg" alt="" />
+		</a>
 	</div>
+	<p class="copyright">© Alexander Acsai {date.getFullYear()}</p>
 </footer>
 
 <style>
-  img {
+	.copyright {
+		margin-top: 50px;
+	}
+	img {
 		height: 50px;
+		margin-top: 150px;
 	}
 	footer {
 		background-color: var(--powderBlue);
 		height: 500px;
 	}
-  .footer-container{
-    margin-top;
-  }
+	.footer-container {
+		margin-top:;
+	}
 </style>
