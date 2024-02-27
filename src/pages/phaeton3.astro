@@ -1,0 +1,51 @@
+---
+import Splide from "@splidejs/splide";
+import Layout from "../layouts/Layout.astro";
+import { imageSources } from "../scripts/imageData.js";
+import "@splidejs/splide/css/skyblue";
+// console.log(imageSources);
+const splide = new Splide(".splide");
+splide.mount();
+---
+
+<Layout title="Phaeton project">
+	<h1>Phaeton</h1>
+	<h2>A shuttle, car and parking rental web app</h2>
+	<h3>
+		Description:
+		<br />
+		This was my school project, i was in a team of 4
+	</h3>
+	<div class="splide" role="group" aria-label="Splide Basic HTML Example">
+		<div class="splide__track">
+			<ul class="splide__list">
+				<!-- {
+					imageSources.map((img, i) => {
+						return (
+							<li class="splide__slide">
+								<img src={img} alt="" />
+							</li>
+						);
+					})
+				} -->
+				<li class="splide__slide">Slide 01</li>
+				<li class="splide__slide">Slide 02</li>
+				<li class="splide__slide">Slide 03</li>
+			</ul>
+		</div>
+	</div>
+</Layout>
+<style>
+	/* ul {
+		list-style: none;
+		display: flex;
+		gap: 10px;
+		overflow: scroll;
+	} */
+	img {
+		background-color: red;
+		width: 100px;
+		height: 90px;
+		overflow: hidden;
+	}
+</style>

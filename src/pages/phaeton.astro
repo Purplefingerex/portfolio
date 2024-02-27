@@ -2,6 +2,18 @@
 import Layout from "../layouts/Layout.astro";
 import { imageSources } from "../scripts/imageData.js";
 // console.log(imageSources);
+
+/*
+{
+				imageSources.map((img, i) => {
+					return (
+						<li>
+							<img src={img} alt="" />
+						</li>
+					);
+				})
+			}
+*/
 ---
 
 <Layout title="Phaeton project">
@@ -12,30 +24,97 @@ import { imageSources } from "../scripts/imageData.js";
 		<br />
 		This was my school project, i was in a team of 4
 	</h3>
-	<div class="carousel">
-		<ul class="carouselTargetList">
+	<div class="carousel-container">
+		<div class="carousel">
+			<img
+				src="/phaeton-pics/Phaeton_1.png"
+				alt="Phaeton_1"
+				class="active"
+			/>
+
 			{
 				imageSources.map((img, i) => {
-					return (
-						<li>
-							<img src={img} alt="" />
-						</li>
-					);
+					return <img src={img} alt={`Phaeton_${i}`} />;
 				})
 			}
-		</ul>
+			<!-- További képek ide -->
+		</div>
+		<button class="prev-btn">⬅</button>
+		<button class="next-btn">➡</button>
 	</div>
+	<div class="img-nav-container">
+		<div class="img-nav active" id="phaeton_1"></div>
+
+		{
+			imageSources.map((str, i) => {
+				return <div class="img-nav" id={`phaeton_${i + 2}`} />;
+			})
+		}
+	</div>
+	<script src="../scripts/carousel.js">
+		initializeCarousel();
+	</script>
 </Layout>
 <style>
-	ul {
-		list-style: none;
+	.img-nav-container {
+		margin-top: 20px;
+		text-align: center;
 		display: flex;
-		gap: 10px;
-		overflow: scroll;
+		gap: 30px;
+		justify-content: center;
 	}
-	img {
-		width: 350px;
-		height: 200px;
-		overflow: hidden;
+	.img-nav {
+		width: 18px;
+		height: 18px;
+		background-color: var(--gunmetal);
+		border-radius: 50%;
+		cursor: pointer;
+	}
+	.img-nav.active {
+		scale: 1.5;
+	}
+	.carousel-container {
+		position: relative;
+		width: 100%;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.carousel {
+		display: flex;
+		overflow-x: hidden;
+	}
+
+	.carousel img {
+		width: 100%;
+		height: 580px;
+		border-radius: 15px;
+		opacity: 0;
+		transition: opacity 0.5s ease;
+		display: none;
+	}
+
+	.carousel img.active {
+		opacity: 1;
+		display: block;
+	}
+
+	.prev-btn,
+	.next-btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background: transparent;
+		border: none;
+		font-size: 50px;
+		cursor: pointer;
+	}
+
+	.prev-btn {
+		left: -60px;
+	}
+
+	.next-btn {
+		right: -60px;
 	}
 </style>

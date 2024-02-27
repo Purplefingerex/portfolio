@@ -1,5 +1,4 @@
 export const imageSources = [
-	"/phaeton-pics/Phaeton_1.png",
 	"/phaeton-pics/Phaeton_2.png",
 	"/phaeton-pics/Phaeton_3.png",
 	"/phaeton-pics/Phaeton_4.png",
@@ -9,12 +8,4 @@ export const imageSources = [
 	"/phaeton-pics/Phaeton_8.png",
 	"/phaeton-pics/Phaeton_9.png",
 	"/phaeton-pics/Phaeton_10.png",
-	"/phaeton-pics/Phaeton_11.png",
-	"/phaeton-pics/Phaeton_12.png",
-	"/phaeton-pics/Phaeton_13.png",
-	"/phaeton-pics/Phaeton_14.png",
-	"/phaeton-pics/Phaeton_15.png",
-	"/phaeton-pics/Phaeton_16.png",
-	"/phaeton-pics/Phaeton_17.png",
-	"/phaeton-pics/Phaeton_18.png",
 ];
