@@ -1,5 +1,5 @@
-<div class="hero-container" id="hero">
-	<img class="bg-div" src="/circlesbg.png" alt="" />
+<div class="hero-container" id="top">
+	<img class="bg-img" src="/circlesbg.png" alt="" />
 	<div class="zindexes">
 		<h1>Welcome, my name is Alexander Acsai</h1>
 		<h2>I'm a Junior Full Stack Developer</h2>
@@ -33,7 +33,7 @@
 	.zindexes {
 		z-index: 2;
 	}
-	.bg-div {
+	.bg-img {
 		opacity: 100%;
 		position: absolute;
 		z-index: 0;
@@ -43,5 +43,20 @@
 		margin: auto;
 		padding: 0;
 		max-width: 900px;
+	}
+	@media screen and (max-width: 900px) {
+		.bg-img {
+			display: none;
+		}
+		.profile-pic {
+			position: static;
+			width: 300px;
+		}
+		.pic-container {
+			margin-top: 50px;
+		}
+		.zindexes {
+			font-size: 0.9rem;
+		}
 	}
 </style>

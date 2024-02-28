@@ -17,13 +17,10 @@ import { imageSources } from "../scripts/imageData.js";
 ---
 
 <Layout title="Phaeton project">
+	<a href="#hero">Home</a>
 	<h1>Phaeton</h1>
 	<h2>A shuttle, car and parking rental web app</h2>
-	<h3>
-		Description:
-		<br />
-		This was my school project, i was in a team of 4
-	</h3>
+
 	<div class="carousel-container">
 		<div class="carousel">
 			<img
@@ -51,11 +48,34 @@ import { imageSources } from "../scripts/imageData.js";
 			})
 		}
 	</div>
+	<div class="description">
+		<h3>
+			Description:
+			<br />
+			This was my school project, i was in a team of 4, scrum method
+		</h3>
+		<p>Frontend made in React.js, backend in Node.js, Express.js</p>
+		<p>For database Postresql was used with Prisma ORM</p>
+		<h3>Video demo:</h3>
+		<iframe
+			width="420"
+			height="320"
+			src="https://youtube.com/embed/zzP4PrdLFGg"></iframe>
+		<p>
+			The user can rent a car or reserve one or more parking spots. The
+			user doesn't have to register, which means they can remain a guest
+			user.
+		</p>
+		<p>After renting or reserving, the user gets a receipt via e-mail.</p>
+	</div>
 	<script src="../scripts/carousel.js">
 		initializeCarousel();
 	</script>
 </Layout>
 <style>
+	iframe {
+		border: none;
+	}
 	.img-nav-container {
 		margin-top: 20px;
 		text-align: center;
@@ -69,9 +89,13 @@ import { imageSources } from "../scripts/imageData.js";
 		background-color: var(--gunmetal);
 		border-radius: 50%;
 		cursor: pointer;
+		transition: all 0.3s;
 	}
 	.img-nav.active {
 		scale: 1.5;
+	}
+	.img-nav:hover {
+		background-color: white;
 	}
 	.carousel-container {
 		position: relative;
@@ -108,13 +132,42 @@ import { imageSources } from "../scripts/imageData.js";
 		border: none;
 		font-size: 50px;
 		cursor: pointer;
+		transition: all 0.3s;
 	}
-
+	.prev-btn:hover,
+	.next-btn:hover {
+		color: white;
+	}
 	.prev-btn {
 		left: -60px;
 	}
 
 	.next-btn {
 		right: -60px;
+	}
+	.description {
+		padding-bottom: 50px;
+	}
+	/* mobile */
+
+	@media screen and (max-width: 910px) {
+		.carousel img {
+			width: 100%;
+			height: 520px;
+		}
+		.prev-btn,
+		.next-btn {
+			display: none;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		.carousel img {
+			width: 100%;
+			height: 420px;
+		}
+		.prev-btn,
+		.next-btn {
+			display: none;
+		}
 	}
 </style>
