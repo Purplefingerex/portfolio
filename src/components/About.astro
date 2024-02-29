@@ -1,11 +1,15 @@
 <div class="about-container" id="about">
 	<div class="text-container first">
+		<img src="/welder.png" alt="welder" />
+
 		<p>
 			After years of experience in metalworking, welding and locksmithing,
 			I decided to transition my career to software development.
 		</p>
 	</div>
 	<div class="text-container second">
+		<img src="/learner.png" alt="learner" />
+
 		<p>
 			I was learning by myself but i realized i need help. So in 2023 i
 			started a 9 month course at Progmatic Academy Kft. in Hungary as a
@@ -14,7 +18,7 @@
 	</div>
 
 	<div class="text-container third">
-		<img src="/avatar.png" alt="" />
+		<img src="/avatar.png" alt="coder" />
 		<div>
 			<p>
 				Since then i'm doing my own projects, learning new things and
@@ -47,6 +51,8 @@
 		border-radius: 15px;
 		max-width: 800px;
 		background-color: var(--aliceBlue);
+		display: flex;
+		align-items: center;
 	}
 	p {
 		line-height: 1.5em;
@@ -55,10 +61,11 @@
 		font-size: 1.2rem;
 	}
 	img {
-		width: 400px;
+		height: 200px;
+		width: 200px;
+		border-radius: 15px 0 0 15px;
 	}
 	.third {
-		display: flex;
 		margin-left: 35%;
 	}
 	.first {
@@ -72,7 +79,7 @@
 
 	@media screen and (max-width: 900px) {
 		p {
-			padding: 0;
+			padding: 0px;
 			margin: 0;
 			font-size: 0.8rem;
 		}
@@ -80,12 +87,18 @@
 			width: 80px;
 			height: 80px;
 		}
-		.third,
+		.third {
+			align-items: center;
+			margin: 0 20px;
+		}
+
+		.second,
 		.first {
-			margin: 0;
+			padding: 5px;
+			margin: 0 20px;
 		}
 		.about-container {
-			gap: 40px;
+			gap: 70px;
 		}
 	}
 </style>

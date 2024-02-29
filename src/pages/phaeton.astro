@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import BackButton from "../components/BackButton.astro";
 import { imageSources } from "../scripts/imageData.js";
 ---
 
 <Layout title="Phaeton project">
+	<BackButton />
 	<h1>Phaeton</h1>
 	<h2>A shuttle, car and parking rental web app</h2>
 
@@ -20,7 +22,6 @@ import { imageSources } from "../scripts/imageData.js";
 					return <img src={img} alt={`Phaeton_${i}`} />;
 				})
 			}
-			<!-- További képek ide -->
 		</div>
 		<button class="prev-btn">⬅</button>
 		<button class="next-btn">➡</button>
@@ -34,6 +35,7 @@ import { imageSources } from "../scripts/imageData.js";
 			})
 		}
 	</div>
+
 	<div class="description">
 		<h3>
 			Description:
@@ -42,6 +44,11 @@ import { imageSources } from "../scripts/imageData.js";
 		</h3>
 		<p>Frontend made in React.js, backend in Node.js, Express.js</p>
 		<p>For database Postresql was used with Prisma ORM</p>
+		<a
+			target="_blank"
+			class="source-code"
+			href="https://github.com/Purplefingerex/phaeton">Source Code</a
+		>
 		<h3>Video demo:</h3>
 		<iframe
 			width="420"
@@ -61,6 +68,7 @@ import { imageSources } from "../scripts/imageData.js";
 <style>
 	iframe {
 		border: none;
+		border-radius: 5px;
 	}
 	.img-nav-container {
 		margin-top: 20px;
@@ -132,8 +140,23 @@ import { imageSources } from "../scripts/imageData.js";
 		right: -60px;
 	}
 	.description {
+		margin: 80px auto;
 		padding-bottom: 50px;
 	}
+	.source-code {
+		color: var(--aliceBlue);
+		padding: 5px;
+		border-radius: 5px;
+		background-color: var(--gunmetal);
+		transition: all 0.3s;
+	}
+	.source-code:hover {
+		background-color: var(--roseQuartz);
+	}
+	.source-code:active {
+		background-color: black;
+	}
+
 	/* mobile */
 
 	@media screen and (max-width: 910px) {

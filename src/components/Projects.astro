@@ -9,8 +9,7 @@
 				Car and parking rental
 			</div></a
 		>
-		<div>Portfolio</div>
-		<div>Coming soon</div>
+		<div class="project-div"><span>Coming soon</span></div>
 	</div>
 </div>
 
@@ -29,7 +28,7 @@
 	.project-container div {
 		height: 200px;
 		width: 300px;
-		background-color: cadetblue;
+		background-color: #bf4b46;
 		border-radius: 15px;
 		box-shadow: 0px 5px 2px 0px var(--powderBlue);
 	}
@@ -41,6 +40,11 @@
 	}
 	img:hover {
 		scale: 1.2;
+	}
+	.project-div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	@media screen and (max-width: 900px) {
 		.project-container {

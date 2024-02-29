@@ -23,9 +23,9 @@ function initializeCarousel() {
 		removeActiveClass();
 		imgDots[index].classList.add("active");
 		images.forEach(image => {
-			image.style.opacity = 0; // Beállítjuk az inaktív képek átlátszóságát 0-ra
+			image.style.opacity = 0;
 		});
-		images[index].style.opacity = 1; // Az aktív kép átlátszóságát beállítjuk 1-re
+		images[index].style.opacity = 1;
 	}
 
 	imgDots.forEach((dot, index) => {
