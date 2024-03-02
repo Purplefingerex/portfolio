@@ -1,11 +1,16 @@
 <div class="hero-container" id="top">
-	<img class="bg-img" src="/circlesbg.png" alt="" />
+	<img loading="lazy" class="bg-img" src="/circlesbg.png" alt="" />
 	<div class="zindexes">
-		<h1>Welcome, my name is Alexander Acsai</h1>
-		<h2>I'm a Junior Full Stack Developer</h2>
+		<h1 class="first-line">Welcome, my name is Alexander Acsai</h1>
+		<h2 class="second-line">I'm a Junior Full Stack Developer</h2>
 	</div>
 	<div class="pic-container">
-		<img class="profile-pic" src="/1191199.png" alt="Picture of me" />
+		<img
+			loading="lazy"
+			class="profile-pic"
+			src="/1191199.png"
+			alt="Picture of me"
+		/>
 	</div>
 </div>
 
@@ -27,12 +32,8 @@
 		margin: auto;
 		z-index: 33;
 		border-radius: 150%;
-		/* box-shadow: 0px 0px 8px 12px rgba(0, 0, 0, 0.5); */
 	}
 
-	.zindexes {
-		z-index: 2;
-	}
 	.bg-img {
 		opacity: 100%;
 		position: absolute;
@@ -44,6 +45,7 @@
 		padding: 0;
 		max-width: 900px;
 	}
+
 	@media screen and (max-width: 900px) {
 		.bg-img {
 			display: none;

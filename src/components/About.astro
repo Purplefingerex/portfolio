@@ -1,6 +1,6 @@
 <div class="about-container" id="about">
 	<div class="text-container first">
-		<img src="/welder.png" alt="welder" />
+		<img loading="lazy" src="/welder.png" alt="welder" />
 
 		<p>
 			After years of experience in metalworking, welding and locksmithing,
@@ -8,17 +8,17 @@
 		</p>
 	</div>
 	<div class="text-container second">
-		<img src="/learner.png" alt="learner" />
+		<img loading="lazy" src="/learner.png" alt="learner" />
 
 		<p>
 			I was learning by myself but i realized i need help. So in 2023 i
-			started a 9 month course at Progmatic Academy Kft. in Hungary as a
-			Junior Full Stack Developer.
+			started a course at Progmatic Academy Kft. in Hungary as a Junior
+			Full Stack Developer.
 		</p>
 	</div>
 
 	<div class="text-container third">
-		<img src="/avatar.png" alt="coder" />
+		<img loading="lazy" src="/avatar.png" alt="coder" />
 		<div>
 			<p>
 				Since then i'm doing my own projects, learning new things and
@@ -53,7 +53,6 @@
 		background-color: var(--aliceBlue);
 		display: flex;
 		align-items: center;
-		gap: 5px;
 	}
 	p {
 		line-height: 1.5em;
@@ -75,13 +74,13 @@
 
 	@media screen and (max-width: 900px) {
 		p {
-			padding: 0px;
+			padding: 0 5px;
 			margin: 0;
 			font-size: 0.79rem;
 		}
 		img {
-			width: 120px;
-			height: 120px;
+			width: 140px;
+			height: 140px;
 		}
 		.third {
 			margin: 0 20px;
