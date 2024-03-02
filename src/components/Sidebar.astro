@@ -2,7 +2,7 @@
 
 ---
 
-<div class="sidebar open">
+<div class="sidebar closed">
 	<div class="links">
 		<a href="#about">About Me</a>
 		<a href="#projects">Projects</a>
@@ -36,11 +36,10 @@
 <style>
 	.sidebar {
 		z-index: 99;
-		margin-top: 200px;
 		background-color: var(--gunmetal);
 		position: fixed;
 		padding: 55px 20px 55px 10px;
-		top: 0;
+		top: 20%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -57,9 +56,7 @@
 		margin-left: 20px;
 		display: none;
 	}
-	.sidebar-toggler:hover {
-		background-color: black;
-	}
+
 	.links {
 		display: flex;
 		flex-direction: column;
@@ -69,16 +66,15 @@
 		.sidebar {
 			padding: 55px 0 55px 10px;
 			transition: left 0.3s ease-in;
+			top: 40%;
 		}
 		.sidebar-toggler {
 			display: block;
 			transition: all 0.3s;
 		}
-		.sidebar-toggler:hover {
-			background-color: black;
-		}
+
 		.sidebar-toggler:active {
-			background-color: wheat;
+			background-color: rgb(0, 0, 0);
 		}
 
 		.closed {
