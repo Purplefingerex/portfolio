@@ -1,30 +1,29 @@
-<div class="tech-main">
-	<h1>Technologies</h1>
-	<div class="tech-container">
-		<ul>
-			<li>CSS</li>
-			<li>HTML</li>
-			<li>React.js</li>
-			<li>Javascript</li>
-		</ul>
+---
+import TechStack from "./TechStack.astro";
+---
 
-		<ul>
-			<li>Git</li>
-			<li>Jira</li>
-			<li>Node.js</li>
-			<li>Postgresql</li>
-		</ul>
+<div class="tech-main">
+	<h1>Technical Skills</h1>
+	<div class="tech-container">
+		<TechStack imgSrc="/tech-stack/html.png" name="HTML" />
+		<TechStack imgSrc="/tech-stack/css.png" name="CSS" />
+		<TechStack imgSrc="/tech-stack/javascript.png" name="Javascript" />
+		<TechStack imgSrc="/tech-stack/git.png" name="Git" />
+		<TechStack imgSrc="/tech-stack/react.png" name="React.js" />
+		<TechStack imgSrc="/tech-stack/nodejs.png" name="Node.js" />
+		<TechStack imgSrc="/tech-stack/astrojs.png" name="Astro.js" />
+		<TechStack imgSrc="/tech-stack/postgresql.png" name="PostgreSQL" />
+		<TechStack imgSrc="/tech-stack/agile-scrum.png" name="Agile Scrum" />
 	</div>
 </div>
-
 <style>
 	.tech-main {
+		max-width: 900px;
 		font-size: 1.3rem;
 		background-color: var(--gunmetal);
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
-		max-width: 800px;
 		margin: -50px auto 20px;
 		border-radius: 15px;
 		color: #b8c5d6;
@@ -32,25 +31,17 @@
 	}
 	.tech-container {
 		display: flex;
+		justify-content: center;
 		flex-wrap: wrap;
-		gap: 100px;
-		margin: 0 auto;
+		gap: 50px;
 	}
-	ul {
-		list-style: none;
-	}
-	ul li {
-		margin: 10px;
-	}
+
 	@media screen and (max-width: 900px) {
 		.tech-main {
 			font-size: 1rem;
 		}
 		.tech-container {
-			gap: 20px;
-		}
-		ul {
-			padding: 0;
+			gap: 0;
 		}
 	}
 </style>

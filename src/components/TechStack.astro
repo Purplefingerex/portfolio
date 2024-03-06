@@ -1,0 +1,33 @@
+---
+interface Props {
+	imgSrc: string;
+	name: string;
+}
+const { imgSrc, name } = Astro.props;
+---
+
+<div class="tech">
+	<img src={imgSrc} alt={name} />
+	<p>{name}</p>
+</div>
+<style>
+	.tech {
+		display: flex;
+		flex-direction: column;
+		margin: 0 20px;
+	}
+	img {
+		width: 50px;
+
+		margin: auto;
+	}
+	@media screen and (max-width: 900px) {
+		img {
+			width: 40px;
+		}
+		.tech {
+			margin: 0 5px;
+			font-size: 0.9rem;
+		}
+	}
+</style>
